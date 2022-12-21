@@ -1,0 +1,107 @@
+@import "./colors/colors.scss";
+@import "./components/hamburguer.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-size: 18px;
+  font-family: "Epilogue", sans-serif;
+}
+
+.container-header {
+  width: min(90vw, 1440px);
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header {
+  #menu {
+    position: fixed;
+    flex-direction: column;
+    right: 0;
+    top: 0;
+    width: min(500px, 70vw);
+    height: 100vh;
+    padding: 6rem clamp(20px, 8vw, 50px);
+    background: #fff;
+    transition: all 0.6s ease;
+    transform: translateX(100%);
+    z-index: 0;
+    li {
+      margin-bottom: 1.5rem;
+
+      a {
+        color: $Medium-Gray;
+        font-size: 1rem;
+
+        i {
+          font-size: 0.6rem;
+          margin-left: 10px;
+        }
+      }
+    }
+    .container-drop {
+      .drop i {
+        transition: all 0.6s ease;
+      }
+      .sub-menu-drop {
+        max-height: 0;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        overflow: hidden;
+        transition: all 0.25s ease;
+        img {
+          margin-right: 15px;
+        }
+      }
+    }
+
+    .container-drop.active-drop {
+      .drop i {
+        transform: rotate(-180deg);
+      }
+      .sub-menu-drop {
+        max-height: 100vh;
+        padding-top: 2rem;
+        transition: all 0.25s ease;
+      }
+    }
+  }
+  .area-login {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    a {
+      width: 100%;
+      font-size: 1rem;
+    }
+  }
+
+  #menu.active-menu {
+    transform: translateX(0);
+    box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.5);
+  }
+}
+button {
+  width: 100%;
+  padding: 10px 0;
+  background-color: transparent;
+  border: 2px solid $Almost-Black;
+  border-radius: 10px;
+  color: $Medium-Gray;
+  font-size: 0.9rem;
+}
+// #menu a button {
+//   color: var(--very-light-gray);
+//   border: solid 1px var(--very-light-gray);
+//   height: 3rem;
+//   width: 20rem;
+// }

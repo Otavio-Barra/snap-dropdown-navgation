@@ -1,0 +1,76 @@
+.ham {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 500ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  z-index: 1;
+}
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+
+.line {
+  fill: none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 450ms;
+  stroke: #000;
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+.ham1 {
+  .top {
+    stroke-dasharray: 40 139;
+  }
+  .bottom {
+    stroke-dasharray: 40 180;
+  }
+}
+
+.ham1.active {
+  .top {
+    stroke-dashoffset: -98px;
+  }
+  .bottom {
+    stroke-dashoffset: -138px;
+  }
+}
+
+// #btn-menu {
+//   background: none;
+//   border: solid 2px var(--very-dark-violet);
+//   padding: 7px;
+//   display: block;
+// }
+// #btn-menu > span {
+//   display: block;
+//   width: 20px;
+//   height: 2px;
+//   border-radius: 9999px;
+//   background-color: #000;
+// }
+// #btn-menu > span:not(:last-child) {
+//   margin-bottom: 4px;
+// }
+// #btn-menu,
+// #btn-menu > span {
+//   transition: all 0.4s ease-in-out;
+// }
+// #btn-menu.active {
+//   transition-delay: 0.6s;
+// }
+// #btn-menu.active > span:nth-child(2) {
+//   width: 0;
+// }
+// #btn-menu.active > span:nth-child(1),
+// #btn-menu.active > span:nth-child(3) {
+//   transition-delay: 0.4s;
+// }
+// #btn-menu.active > span:nth-child(1) {
+//   transform: translateY(7px) rotate(45deg);
+// }
+// #btn-menu.active > span:nth-child(3) {
+//   transform: translateY(-5px) rotate(-45deg);
+// }
